@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
     <title>Wallet Generator</title>
 </head>
 <body>
-    
+    <div class="wallets-info">
+        <div class="public-keys"> 
+            <h2>Public Key</h2>
+            <p class="generated-wallets">1 2 3 4 5</p>
+        </div>
+        <div class="private-keys">
+            <h2>Private Key</h2>
+            <p class="generated-wallets">1 2 3 4 5</p>
+        </div>
+    </div>
+    <div class="generation-config">
+        <div>
+            <h2>Amount of Wallets:</h2>
+            <input type="text" id="wallets-amount">
+        </div>
+        <button id="generateButton">Generate</button>
+    </div>
+    <script type="module" defer>
+        import { generateWallets } from './script/generateWallets.js';
+        document.getElementById('generateButton').addEventListener('click', generateWallets);
+    </script>
 </body>
 </html>
