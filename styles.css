@@ -1,0 +1,41 @@
+body {
+    font-family: "Roboto", serif;
+}
+
+p {
+    font-size: 18px;
+    line-height: 3px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px;
+}
+
+.wallets-info {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.private-keys {
+    flex: 1;
+}
+
+.public-keys {
+    flex: 1;
+}
+
+.generated-wallets {
+    height: 500px;
+    background-color: lightgray;
+    margin: 20px;
+}
+
+.generation-config {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 80%;
+}
