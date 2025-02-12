@@ -4,23 +4,15 @@ body {
 
 p {
     font-size: 18px;
-<<<<<<< HEAD
-=======
-    line-height: 3px;
->>>>>>> c17e620a9a95192217326ff002913e7927886ebb
 }
 
 h2 {
     font-size: 24px;
-<<<<<<< HEAD
     margin-bottom: 10px;
 }
 
 .public-keys, .private-keys {
     padding-left: 20px;
-=======
-    margin: 20px;
->>>>>>> c17e620a9a95192217326ff002913e7927886ebb
 }
 
 .wallets-info {
@@ -29,7 +21,6 @@ h2 {
     width: 80%;
 }
 
-<<<<<<< HEAD
 .private-keys, .public-keys {
     flex: 1;
     position: relative;
@@ -84,20 +75,6 @@ h2 {
 
 .generate-wallets-button:active {
     background-color: #007860;
-=======
-.private-keys {
-    flex: 1;
-}
-
-.public-keys {
-    flex: 1;
-}
-
-.generated-wallets {
-    height: 500px;
-    background-color: lightgray;
-    margin: 20px;
->>>>>>> c17e620a9a95192217326ff002913e7927886ebb
 }
 
 .generation-config {
@@ -106,7 +83,6 @@ h2 {
     justify-content: space-evenly;
 
     width: 80%;
-<<<<<<< HEAD
 }
 
 .wallets-amount-container {
@@ -153,6 +129,4 @@ h2 {
     background-color: #f1f1f1;
     color: #333333;
     cursor: not-allowed;
-=======
->>>>>>> c17e620a9a95192217326ff002913e7927886ebb
 }

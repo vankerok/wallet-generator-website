@@ -14,7 +14,6 @@
 <body>
     <div class="wallets-info">
         <div class="public-keys"> 
-<<<<<<< HEAD
             <h2>Public Keys</h2>
             <p class="generated-public-keys" id="public-key-results"></p>
             <button type="button" class="copy-button" data-copy=".generated-public-keys">
@@ -42,23 +41,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-=======
-            <h2>Public Key</h2>
-            <p class="generated-wallets">1 2 3 4 5</p>
-        </div>
-        <div class="private-keys">
-            <h2>Private Key</h2>
-            <p class="generated-wallets">1 2 3 4 5</p>
-        </div>
-    </div>
-    <div class="generation-config">
-        <div>
-            <h2>Amount of Wallets:</h2>
-            <input type="text" id="wallets-amount">
-        </div>
-        <button id="generateButton">Generate</button>
-    </div>
->>>>>>> c17e620a9a95192217326ff002913e7927886ebb
     <script type="module" defer>
         import { generateWallets } from './script/generateWallets.js';
         document.getElementById('generateButton').addEventListener('click', generateWallets);
