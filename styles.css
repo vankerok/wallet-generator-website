@@ -4,12 +4,15 @@ body {
 
 p {
     font-size: 18px;
-    line-height: 3px;
 }
 
 h2 {
     font-size: 24px;
-    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.public-keys, .private-keys {
+    padding-left: 20px;
 }
 
 .wallets-info {
@@ -18,18 +21,60 @@ h2 {
     width: 80%;
 }
 
-.private-keys {
+.private-keys, .public-keys {
     flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.public-keys {
-    flex: 1;
-}
-
-.generated-wallets {
-    height: 500px;
+.generated-public-keys, .generated-private-keys {
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
     background-color: lightgray;
-    margin: 20px;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.generated-public-keys::-webkit-scrollbar, .generated-private-keys::-webkit-scrollbar {
+    width: 5px;
+}
+
+.generated-public-keys::-webkit-scrollbar-thumb, .generated-private-keys::-webkit-scrollbar-thumb {
+    background-color: rgb(133, 133, 133);
+    border-radius: 5px;
+}
+
+.generated-wallets:hover {
+    cursor: pointer;
+}
+
+.generate-wallets-button {
+    background-color: #009578;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.generate-wallets-button:hover {
+    cursor: pointer;
+    background-color: #00886d;
+}
+
+.generate-wallets-button:active {
+    background-color: #007860;
 }
 
 .generation-config {
@@ -38,4 +83,50 @@ h2 {
     justify-content: space-evenly;
 
     width: 80%;
+}
+
+.wallets-amount-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wallets-amount-input {
+    width: 50%;
+    height: 20px;
+}
+
+.copy-button {
+    background-color: #009578;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.copy-button:hover {
+    cursor: pointer;
+    background-color: #00886d;
+}
+
+.copy-button:active {
+    background-color: #007860;
+}
+
+.copy-button:disabled {
+    background-color: #f1f1f1;
+    color: #333333;
+    cursor: not-allowed;
 }

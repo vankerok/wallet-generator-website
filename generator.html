@@ -9,25 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
     <title>Wallet Generator</title>
+    <script src="script/copyKeys.js" type="module"></script>
 </head>
 <body>
     <div class="wallets-info">
         <div class="public-keys"> 
-            <h2>Public Key</h2>
-            <p class="generated-wallets">1 2 3 4 5</p>
+            <h2>Public Keys</h2>
+            <p class="generated-public-keys" id="public-key-results"></p>
+            <button type="button" class="copy-button" data-copy=".generated-public-keys">
+                <ion-icon name="copy-outline"></ion-icon>
+                <span class="copy-label">Copy</span>
+            </button>
         </div>
         <div class="private-keys">
-            <h2>Private Key</h2>
-            <p class="generated-wallets">1 2 3 4 5</p>
+            <h2>Private Keys</h2>
+            <p class="generated-private-keys" id="private-key-results"></p>
+            <button type="button" class="copy-button" data-copy=".generated-private-keys">
+                <ion-icon name="copy-outline"></ion-icon>
+                <span class="copy-label">Copy</span>
+            </button>
         </div>
     </div>
     <div class="generation-config">
-        <div>
+        <div class="wallets-amount-container">
             <h2>Amount of Wallets:</h2>
-            <input type="text" id="wallets-amount">
+            <input type="number" id="wallets-amount" class="wallets-amount-input" min="1" max="20">
         </div>
-        <button id="generateButton">Generate</button>
+        <button id="generateButton" class="generate-wallets-button">Generate</button>
     </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <script type="module" defer>
         import { generateWallets } from './script/generateWallets.js';
         document.getElementById('generateButton').addEventListener('click', generateWallets);
