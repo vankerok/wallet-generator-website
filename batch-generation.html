@@ -8,10 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
-    <title>Wallet Generator</title>
+    <title>Mass Wallet Generator</title>
     <script src="script/copyKeys.js" type="module"></script>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="main-menu-link">Back to The Main Menu</a>
+    </nav>
     <div class="wallets-info">
         <div class="public-keys"> 
             <h2>Public Keys</h2>
@@ -23,7 +26,10 @@
         </div>
         <div class="private-keys">
             <h2>Private Keys</h2>
-            <p class="generated-private-keys" id="private-key-results"></p>
+            <div class="private-keys-container">
+                <div class="private-keys-overlay">Hover to Reveal</div>
+                <p class="generated-private-keys" id="private-key-results"></p>
+            </div>
             <button type="button" class="copy-button" data-copy=".generated-private-keys">
                 <ion-icon name="copy-outline"></ion-icon>
                 <span class="copy-label">Copy</span>
@@ -42,8 +48,14 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script type="module" defer>
-        import { generateWallets } from './script/generateWallets.js';
-        document.getElementById('generateButton').addEventListener('click', generateWallets);
+        import { batchWalletsGen } from './script/generateWallets.js';
+        import { blurPrivateKeys } from './script/blurPrivateKeys.js';
+
+        document.getElementById('generateButton').addEventListener('click', () => {
+            batchWalletsGen();
+            blurPrivateKeys();
+        });
+
     </script>
 </body>
-</html>
+</html> 

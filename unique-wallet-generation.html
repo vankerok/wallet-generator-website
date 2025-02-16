@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Wallet Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="index.html" class="main-menu-link">Back to The Main Menu</a>
+        </nav>
+        <header class="unique-wallet-gen-header">
+            <h1>Unique Wallet Generator</h1>
+        </header>
+        <section class="generated-wallet-container">
+            <div class="generated-wallet">
+                <h1 id="unique-wallet-address">Your Wallet</h1>
+                <h2 id="unique-wallet-private-key"></h2>
+            </div>
+        </section>
+        <section class="unique-wallet-gen-config">
+            <div class="startwith-config">
+                <h2>Enter Symbols for Wallet Prefix</h2>
+                <input type="text" class="startwith-input" id="startwith-input">
+            </div>
+            <button class="generate-wallets-button" id="generate-wallets-button">Generate</button>
+        </section>
+        <section class="generated-wallets-number">
+            <p id="generated-wallets-number"></p>
+        </section>
+    </main>
+    <script type="module">
+        import { uniqueStartWithWalletsGen } from './script/generateWallets.js';
+
+        document.getElementById('generate-wallets-button').addEventListener('click', () => {
+            uniqueStartWithWalletsGen();
+        })
+    </script>
+</body>
+</html>

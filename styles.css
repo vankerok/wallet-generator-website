@@ -1,3 +1,5 @@
+/* General Styles */
+
 body {
     font-family: "Roboto", serif;
 }
@@ -10,6 +12,49 @@ h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
+/* index.html */
+
+.greeting-message-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.content-links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content-link {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #009578;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.content-link:hover {
+    background-color: #00886d;
+}
+
+.content-link:active {
+    background-color: #007860;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
+.author-reference {
+    font-size: 16px;
+}
+
+/* batch-generation.html */
 
 .public-keys, .private-keys {
     padding-left: 20px;
@@ -41,6 +86,42 @@ h2 {
     margin-top: 5px;
 }
 
+.generated-private-keys.blurred {
+    filter: blur(4px);
+}
+
+.private-keys-container {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.private-keys-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.private-keys-container:hover .generated-private-keys {
+    filter: blur(0);
+    transition: 0.6s ease-in-out;
+}
+
+.private-keys-container:hover .private-keys-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .generated-public-keys::-webkit-scrollbar, .generated-private-keys::-webkit-scrollbar {
     width: 5px;
 }
@@ -48,10 +129,6 @@ h2 {
 .generated-public-keys::-webkit-scrollbar-thumb, .generated-private-keys::-webkit-scrollbar-thumb {
     background-color: rgb(133, 133, 133);
     border-radius: 5px;
-}
-
-.generated-wallets:hover {
-    cursor: pointer;
 }
 
 .generate-wallets-button {
@@ -110,6 +187,7 @@ h2 {
     outline: none;
     cursor: pointer;
     font-size: 16px;
+    z-index: 2;
 
     position: absolute;
     bottom: 10px;
@@ -129,4 +207,61 @@ h2 {
     background-color: #f1f1f1;
     color: #333333;
     cursor: not-allowed;
+}
+
+/* unique-wallet-generation.html */
+
+.unique-wallet-gen-header {
+    display: flex;
+    justify-content: center;
+}
+
+.generated-wallet-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.generated-wallet {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 50%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.unique-wallet-gen-config {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.startwith-config {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.startwith-input {
+    height: 20px;
+    font-size: 18px;
+    max-width: 50%;
+}
+
+.generated-wallets-number {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
 }
