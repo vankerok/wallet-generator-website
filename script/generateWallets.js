@@ -11,7 +11,7 @@ export function batchWalletsGen() {
     for (let i = 0; i < wallets.length; i++) {
         let wallet = wallets[i];
         keys[wallet.address] = wallet.privateKey;
-    }
+    };
 
     let publicKeys = "";
     let privateKeys = "";
@@ -19,11 +19,11 @@ export function batchWalletsGen() {
     for (let pub in keys) {
         publicKeys += `${pub}\n`;
         privateKeys += `${keys[pub]}\n`;
-    }
+    };
 
     document.getElementById("public-key-results").innerText = publicKeys;
     document.getElementById("private-key-results").innerText = privateKeys;
-}
+};
 
 export function uniqueStartWithWalletsGen () {
     const startWithSymbols = document.getElementById('startwith-input').value;
@@ -51,4 +51,4 @@ export function uniqueStartWithWalletsGen () {
     }
 
     generateWallet();
-}
+};

@@ -12,37 +12,44 @@
     <script src="script/copyKeys.js" type="module"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="main-menu-link">Back to The Main Menu</a>
-    </nav>
-    <div class="wallets-info">
-        <div class="public-keys"> 
-            <h2>Public Keys</h2>
-            <p class="generated-public-keys" id="public-key-results"></p>
-            <button type="button" class="copy-button" data-copy=".generated-public-keys">
-                <ion-icon name="copy-outline"></ion-icon>
-                <span class="copy-label">Copy</span>
-            </button>
-        </div>
-        <div class="private-keys">
-            <h2>Private Keys</h2>
-            <div class="private-keys-container">
-                <div class="private-keys-overlay">Hover to Reveal</div>
-                <p class="generated-private-keys" id="private-key-results"></p>
+    <header>
+        <nav>
+            <a href="index.html" class="main-menu-link">Back to the Main Menu</a>
+        </nav>
+    </header>
+    <main>
+        <section class="wallets-info">
+            <section class="public-keys"> 
+                <h2>Public Keys</h2>
+                <p class="generated-public-keys" id="public-key-results"></p>
+                <button type="button" class="copy-button" data-copy=".generated-public-keys">
+                    <ion-icon name="copy-outline"></ion-icon>
+                    <span class="copy-label">Copy</span>
+                </button>
+            </section>
+            <section class="private-keys">
+                <h2>Private Keys</h2>
+                <div class="private-keys-container">
+                    <div class="private-keys-overlay">Hover to Reveal</div>
+                    <p class="generated-private-keys" id="private-key-results"></p>
+                </div>
+                <button type="button" class="copy-button" data-copy=".generated-private-keys">
+                    <ion-icon name="copy-outline"></ion-icon>
+                    <span class="copy-label">Copy</span>
+                </button>
+            </section>
+        </section>
+        <section class="generation-config">
+            <div class="wallets-amount-container">
+                <h2>Amount of Wallets:</h2>
+                <input type="number" id="wallets-amount" class="wallets-amount-input" min="1" max="20">
             </div>
-            <button type="button" class="copy-button" data-copy=".generated-private-keys">
-                <ion-icon name="copy-outline"></ion-icon>
-                <span class="copy-label">Copy</span>
-            </button>
-        </div>
-    </div>
-    <div class="generation-config">
-        <div class="wallets-amount-container">
-            <h2>Amount of Wallets:</h2>
-            <input type="number" id="wallets-amount" class="wallets-amount-input" min="1" max="20">
-        </div>
-        <button id="generateButton" class="generate-wallets-button">Generate</button>
-    </div>
+            <button id="generateButton" class="generate-wallets-button">Generate</button>
+        </section>
+    </main>
+    <footer class="footer-container">
+        <p class="author-reference">Built by <a href="https://volodymyrbardadym.com" target="_blank">vankerok</a></p>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
