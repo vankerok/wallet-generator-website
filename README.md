@@ -27,4 +27,4 @@ cd wallet-generator-website
 ```
 
 ## Usage
-1. Once you've cloned the necessary repository, run the website locally by opening index.html in your chosen browser
+Once you've cloned the necessary repository, run the website locally by opening index.html in your chosen browser.
