@@ -38,13 +38,13 @@ export function uniqueStartWithWalletsGen () {
             document.getElementById('unique-wallet-address').innerText = wallet[0].address;
             document.getElementById('unique-wallet-private-key').innerHTML = `Private Key: <br> ${wallet[0].privateKey}`;
 
-            document.getElementById('generated-wallets-number').innerHTML = `Finished! <br> Wallets generated: ${walletCount}`;
+            document.getElementById('generated-wallets-number').innerHTML = `Finished! <br> Wallets processed: ${walletCount}`;
         } else {
             web3.eth.accounts.wallet.clear();
             wallet = web3.eth.accounts.wallet.create(1);
             walletCount++;
 
-            document.getElementById('generated-wallets-number').innerText = `Wallets generated: ${walletCount}`;
+            document.getElementById('generated-wallets-number').innerText = `Wallets processed: ${walletCount}`;
 
             setTimeout(generateWallet, 0.0005);
         }
